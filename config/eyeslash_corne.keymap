@@ -12,23 +12,23 @@
 #include <dt-bindings/zmk/rgb.h>
 
 // home row mods for qwerty
-#define QH_S LALT S
-#define QH_D LSFT D
-#define QH_F LGUI F
-#define QH_J RGUI J
-#define QH_K RSFT K
-#define QH_L LALT L
-#define QH_SCLN RCTL SCLN
+#define QH_S &mt LALT S
+#define QH_D &mt LSFT D
+#define QH_F &mt LGUI F
+#define QH_J &mt RGUI J
+#define QH_K &mt RSFT K
+#define QH_L &mt LALT L
+#define QH_SCLN &mt RCTL SCLN
 
 // home row mods COLEMAK
-#define HOME_A LCTL A
-#define HOME_R LALT R
-#define HOME_S LSFT S
-#define HOME_T LGUI T
-#define HOME_N RGUI N
-#define HOME_E RSFT E
-#define HOME_I LALT I
-#define HOME_O RCTL O
+#define HOME_A &mt LCTL A
+#define HOME_R &mt LALT R
+#define HOME_S &mt LSFT S
+#define HOME_T &mt LGUI T
+#define HOME_N &mt RGUI N
+#define HOME_E &mt RSFT E
+#define HOME_I &mt LALT I
+#define HOME_O &mt RCTL O
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
