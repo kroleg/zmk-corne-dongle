@@ -36,6 +36,12 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+        home_a:  {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Shift/Caps Lock Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_SHIFT &kp A>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -68,9 +74,9 @@
         default_layer {
             display-name = "COLEMAK";
             bindings = <
-&kp TAB    &kp Q  &kp W      &kp F     &kp P  &kp B                              &kp UP                &kp J        &kp L  &kp U      &kp Y    &kp O     &kp BSPC
-&kp ESC    &kp A  &kp R      &kp S     &kp T  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &kp N  &kp E      &kp I    &kp O     &kp SQT
-&td0       &kp Z  &kp X      &kp C     &kp V  &kp B       &kp SPACE              &kp DOWN              &kp K        &kp H  &kp COMMA  &kp DOT  &kp EXCL  &kp ESC
+&kp TAB    &kp Q    &kp W      &kp F     &kp P  &kp B                              &kp UP                &kp J        &kp L  &kp U      &kp Y    &kp O     &kp BSPC
+&kp ESC    &home_a  &kp R      &kp S     &kp T  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &kp N  &kp E      &kp I    &kp O     &kp SQT
+&td0       &kp Z    &kp X      &kp C     &kp V  &kp B       &kp SPACE              &kp DOWN              &kp K        &kp H  &kp COMMA  &kp DOT  &kp EXCL  &kp ESC
                              &trans    &mo 2  &trans                                                   &trans       &trans &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
