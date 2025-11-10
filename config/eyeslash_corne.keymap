@@ -11,6 +11,25 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
+// home row mods for qwerty
+#define QH_S LALT S
+#define QH_D LSFT D
+#define QH_F LGUI F
+#define QH_J RGUI J
+#define QH_K RSFT K
+#define QH_L LALT L
+#define QH_SCLN RCTL SCLN
+
+// home row mods COLEMAK
+#define HOME_A LCTL A
+#define HOME_R LALT R
+#define HOME_S LSFT S
+#define HOME_T LGUI T
+#define HOME_N RGUI N
+#define HOME_E RSFT E
+#define HOME_I LALT I
+#define HOME_O RCTL O
+
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
@@ -68,9 +87,9 @@
         default_layer {
             display-name = "COLEMAK";
             bindings = <
-&kp TAB    &kp Q    &kp W      &kp F     &kp P  &kp B                              &kp UP                &kp J        &kp L  &kp U      &kp Y    &kp O     &kp BSPC
-&kp ESC    &mt LSHIFT A  &kp R      &kp S     &kp T  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &kp N  &kp E      &kp I    &kp O     &kp SQT
-&td0       &kp Z    &kp X      &kp C     &kp V  &kp B       &kp SPACE              &kp DOWN              &kp K        &kp H  &kp COMMA  &kp DOT  &kp EXCL  &kp ESC
+&kp TAB    &kp Q    &kp W      &kp F     &kp P   &kp B                              &kp UP                &kp J        &kp L   &kp U      &kp Y    &kp O     &kp BSPC
+&kp ESC    HOME_A   HOME_R     HOME_S    HOME_T  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        HOME_N  HOME_E     HOME_I   HOME_O     &kp SQT
+&td0       &kp Z    &kp X      &kp C     &kp D   &kp V       &kp SPACE              &kp DOWN              &kp K        &kp H   &kp COMMA  &kp DOT  &kp EXCL  &kp ESC
                              &trans    &mo 2  &trans                                                   &trans       &trans &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
