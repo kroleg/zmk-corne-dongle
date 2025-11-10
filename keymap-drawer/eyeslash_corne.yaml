@@ -64,7 +64,7 @@ layers:
   - O
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-esc$$
-  - A
+  - '&home_a'
   - R
   - S
   - T
