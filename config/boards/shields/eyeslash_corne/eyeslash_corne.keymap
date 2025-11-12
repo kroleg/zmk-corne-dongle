@@ -34,6 +34,8 @@
 
 #define QWERTY  0
 #define COLEMAK 1
+#define SYM 2
+#define NAV 3
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -84,7 +86,7 @@
 &kp TAB    &kp Q  &kp W      &kp E     &kp R  &kp T                              &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &to COLEMAK
 &kp ESC    &kp A  &kp S      &kp D     &kp F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &kp B       &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                             &kp TAB   &mo 1  &kp ENTER                                                &lt 3 SPACE  &mo 2  &kp RALT
+                             &kp TAB   &mo SYM  &kp ENTER                                                &lt 3 SPACE  &mo NAV  &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -95,7 +97,7 @@
 &kp TAB    &kp Q    &kp W      &kp F     &kp P   &kp B                              &kp UP                &kp J        &kp L   &kp U      &kp Y    &kp O     &kp BSPC
 &kp ESC    HOME_A   HOME_R     HOME_S    HOME_T  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        HOME_N  HOME_E     HOME_I   HOME_O     &kp SQT
 &td0       &kp Z    &kp X      &kp C     &kp D   &kp V       &kp SPACE              &kp DOWN              &kp K        &kp H   &kp COMMA  &kp DOT  &kp EXCL  &kp ESC
-                             &trans    &mo 2  &trans                                                   &trans       &trans &trans
+                             &trans    &mo SYM  &trans                                                   &trans       &mo NAV &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
