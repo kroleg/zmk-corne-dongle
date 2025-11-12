@@ -14,6 +14,7 @@ jobs:
     permissions:
       contents: write
     with:
+      keymap_patterns: config/boards/shields/eyeslash_corne/*.keymap
       commit_message: "[Draw] ${{ github.event.head_commit.message }}"
       destination: "commit"
       fail_on_error: ${{ fromJSON(true) }}
