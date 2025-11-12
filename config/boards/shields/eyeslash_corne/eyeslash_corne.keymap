@@ -101,10 +101,10 @@
         sym_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                        &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                         &trans        &trans        &trans                                                                         &kp INS          &kp DEL          &trans
+&trans  &kp AMPS  &kp PRCNT  &kp ASTRK  &kp LBKT  &kp RBKT                                        &mmv MOVE_UP                        &kp LT    &kp GT     &kp TILDE   &kp CARET   &kp HASH   &trans
+&trans  &kp ESC   &kp UNDER  &kp EQUAL  &kp LBRC  &kp RBRC                           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DQT   &kp SQT    &kp COLON   &kp FSLH    &kp QMARK  &trans
+&trans  &kp AT    &kp MINUS  &kp PLUS   &kp LPAR  &kp RPAR    &kp C_MUTE                    &mmv MOVE_DOWN                            &kp DLLR  &kp GRAVE  &kp SEMI    &kp PIPE    &kp BSLH   &trans
+                                         &trans        &trans        &trans                                                                         &kp SPACE          &trans          &trans
             >;
             sensor-bindings = <&rgb_encoder>;
         };
@@ -130,5 +130,10 @@
             >;
             sensor-bindings = <&scroll_encoder>;
         };
+
+// &trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                        &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
+// &trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
+// &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
+
     };
 };
