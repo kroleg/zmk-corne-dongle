@@ -4,8 +4,6 @@ manifest:
       url-base: https://github.com/zmkfirmware
     # - name: gpeye
     #   url-base: https://github.com/GPeye
-    - name: tokyo2006
-      url-base: https://github.com/tokyo2006
     - name: englmaxi
       url-base: https://github.com/englmaxi
   projects:
@@ -16,9 +14,6 @@ manifest:
       remote: zmkfirmware
       revision: v0.3.0
       import: app/west.yml
-    - name: prospector-zmk-module                 # <--- and these
-      remote: tokyo2006                          # <---
-      revision: change_spi2
     - name: zmk-dongle-display
       remote: englmaxi
       revision: main
