@@ -56,7 +56,7 @@
 &mt {
     flavor = "balanced";
     require-prior-idle-ms = <150>;
-}
+};
 
 
 / {
@@ -110,8 +110,8 @@
         sym_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp AMPS  &kp PRCNT  &kp ASTRK  &kp LBKT  &kp RBKT                                        &mmv MOVE_UP                        &kp LT    &kp GT     &kp TILDE   &kp CARET   &kp HASH   &trans
-&trans  &kp ESC   &kp UNDER  &kp EQUAL  &kp LBRC  &kp RBRC                           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DQT   &kp SQT    &kp COLON   &kp FSLH    &kp QMARK  &trans
+&trans  &kp AMPS  &kp PRCNT  &kp ASTRK  &kp LBRC  &kp RBRC                                        &mmv MOVE_UP                        &kp LT    &kp GT     &kp TILDE   &kp CARET   &kp HASH   &trans
+&trans  &kp ESC   &kp UNDER  &kp EQUAL  &kp LBKT  &kp RBKT                           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DQT   &kp SQT    &kp COLON   &kp FSLH    &kp QMARK  &trans
 &trans  &kp AT    &kp MINUS  &kp PLUS   &kp LPAR  &kp RPAR    &kp C_MUTE                    &mmv MOVE_DOWN                            &kp DLLR  &kp GRAVE  &kp SEMI    &kp PIPE    &kp BSLH   &trans
                                          &trans        &trans        &trans                                                                         &kp SPACE          &trans      &trans
             >;
