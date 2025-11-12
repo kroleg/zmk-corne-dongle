@@ -30,6 +30,8 @@
 #define HOME_I &mt LALT I
 #define HOME_O &mt RCTL O
 
+#define HYPER &kp LS(LC(LA(LGUI)))
+
 #define QWERTY  0
 #define COLEMAK 1
 
@@ -109,13 +111,13 @@
             sensor-bindings = <&rgb_encoder>;
         };
 
-        raise_layer {
-            display-name = "SYMBOL";
+        nav_layer {
+            display-name = "NAVIGATION";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                           &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5  &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans     &trans     &kp SPACE                                                            &kp RET    &trans     &trans
+&trans  &kp DOT     &kp N4      &kp N3    &kp N2    &kp N1                            &mmv MOVE_UP                     &none  &kp HOME  &kp UP     &kp END      &none  &kp BSPC
+&trans  &kp LCTL    &kp LALT    &kp LSFT  &kp LGUI  &kp N0            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &kp LEFT  &kp DOWN   &kp RIGHT  &kp ESC  &kp GRAVE
+&trans  &kp N9      &kp N8      &kp N7    &kp N6    &kp N5      &trans                &mmv MOVE_DOWN                   &none  &kp LS(TAB)  &kp BSPC   &kp TAB    &none  &kp TILDE
+                                    &trans     &trans     &trans                                                            &trans    &trans     HYPER
             >;
             sensor-bindings = <&scroll_encoder>;
         };
