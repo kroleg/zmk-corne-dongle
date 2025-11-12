@@ -30,7 +30,7 @@
 #define HOME_I &mt LALT I
 #define HOME_O &mt RCTL O
 
-#define HYPER &kp LS(LC(LA(LGUI)))
+#define HYPER &kp LS(LA(LC(LGUI)))
 
 #define QWERTY  0
 #define COLEMAK 1
