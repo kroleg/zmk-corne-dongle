@@ -97,7 +97,7 @@
 &kp TAB    &kp Q    &kp W      &kp F     &kp P   &kp B                              &kp UP                &kp J        &kp L   &kp U      &kp Y    &kp O     &kp BSPC
 &kp ESC    HOME_A   HOME_R     HOME_S    HOME_T  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        HOME_N  HOME_E     HOME_I   HOME_O     &kp SQT
 &td0       &kp Z    &kp X      &kp C     &kp D   &kp V       &kp SPACE              &kp DOWN              &kp K        &kp H   &kp COMMA  &kp DOT  &kp EXCL  &kp ESC
-                             &trans    &mo SYM  &trans                                                   &trans       &mo NAV &trans
+                             &trans    &mo SYM  &trans                                                   &trans       &mo NAV   HYPER
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -108,7 +108,7 @@
 &trans  &kp AMPS  &kp PRCNT  &kp ASTRK  &kp LBKT  &kp RBKT                                        &mmv MOVE_UP                        &kp LT    &kp GT     &kp TILDE   &kp CARET   &kp HASH   &trans
 &trans  &kp ESC   &kp UNDER  &kp EQUAL  &kp LBRC  &kp RBRC                           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DQT   &kp SQT    &kp COLON   &kp FSLH    &kp QMARK  &trans
 &trans  &kp AT    &kp MINUS  &kp PLUS   &kp LPAR  &kp RPAR    &kp C_MUTE                    &mmv MOVE_DOWN                            &kp DLLR  &kp GRAVE  &kp SEMI    &kp PIPE    &kp BSLH   &trans
-                                         &trans        &trans        &trans                                                                         &kp SPACE          &trans          &trans
+                                         &trans        &trans        &trans                                                                         &kp SPACE          &trans      &trans
             >;
             sensor-bindings = <&rgb_encoder>;
         };
@@ -119,7 +119,7 @@
 &trans  &kp DOT     &kp N4      &kp N3    &kp N2    &kp N1                            &mmv MOVE_UP                     &none  &kp HOME  &kp UP     &kp END      &none  &kp BSPC
 &trans  &kp LCTL    &kp LALT    &kp LSFT  &kp LGUI  &kp N0            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &kp LEFT  &kp DOWN   &kp RIGHT  &kp ESC  &kp GRAVE
 &trans  &kp N9      &kp N8      &kp N7    &kp N6    &kp N5      &trans                &mmv MOVE_DOWN                   &none  &kp LS(TAB)  &kp BSPC   &kp TAB    &none  &kp TILDE
-                                    &trans     &trans     &trans                                                            &trans    &trans     HYPER
+                                    &trans     &trans     &trans                                                            &trans    &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
