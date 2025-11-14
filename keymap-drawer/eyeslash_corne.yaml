@@ -1,5 +1,54 @@
 layout: {zmk_keyboard: eyeslash_corne}
 layers:
+  COLEMAK:
+  - $$mdi:keyboard-tab$$
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - $$mdi:arrow-up-bold$$
+  - J
+  - L
+  - U
+  - Y
+  - O
+  - {t: QWERTY, h: toggle}
+  - $$mdi:keyboard-esc$$
+  - {t: A, h: LCTL}
+  - {t: R, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: S, h: LSFT}
+  - {t: T, h: LGUI}
+  - G
+  - $$mdi:arrow-left-bold$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:arrow-right-bold$$
+  - M
+  - {t: N, h: RGUI}
+  - {t: E, h: RSFT}
+  - {t: I, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: O, h: RCTL}
+  - {t: '''', s: '"'}
+  - '&td0'
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - $$mdi:keyboard-space$$
+  - $$mdi:arrow-down-bold$$
+  - K
+  - H
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - '!'
+  - $$mdi:keyboard-esc$$
+  - $$mdi:keyboard-tab$$
+  - SYM
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:keyboard-space$$', h: LSFT}
+  - NAVIGATION
+  - Meh+LGUI
   QWERTY:
   - $$mdi:keyboard-tab$$
   - Q
@@ -44,61 +93,12 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
   - $$mdi:keyboard-tab$$
-  - SYMBOL
+  - SYM
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-space$$', h: LSFT}
   - NAVIGATION
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  COLEMAK:
-  - $$mdi:keyboard-tab$$
-  - Q
-  - W
-  - F
-  - P
-  - B
-  - $$mdi:arrow-up-bold$$
-  - J
-  - L
-  - U
-  - Y
-  - O
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:keyboard-esc$$
-  - {t: A, h: LCTL}
-  - {t: R, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: S, h: LSFT}
-  - {t: T, h: LGUI}
-  - G
-  - $$mdi:arrow-left-bold$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:arrow-right-bold$$
-  - M
-  - {t: N, h: RGUI}
-  - {t: E, h: RSFT}
-  - {t: I, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: O, h: RCTL}
-  - {t: '''', s: '"'}
-  - '&td0'
-  - Z
-  - X
-  - C
-  - D
-  - V
-  - $$mdi:keyboard-space$$
-  - $$mdi:arrow-down-bold$$
-  - K
-  - H
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
-  - '!'
-  - $$mdi:keyboard-esc$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - SYMBOL
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - NAVIGATION
-  - Meh+LGUI
-  SYMBOL:
+  SYM:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&'
   - '%'
