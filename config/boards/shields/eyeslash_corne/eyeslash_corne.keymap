@@ -36,6 +36,7 @@
 #define QWERTY  1
 #define SYM 2
 #define NAV 3
+#define TRI 4
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -58,6 +59,15 @@
     require-prior-idle-ms = <150>;
 };
 
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <SYM NAV>;
+            then-layer = <TRI>;
+        };
+    };
+};
 
 / {
     behaviors {
@@ -86,7 +96,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "COLEMAK";
+            display-name = "COLEM";
             bindings = <
 &kp TAB    &kp Q    &kp W      &kp F     &kp P   &kp B                              &kp UP                &kp J        &kp L   &kp U      &kp Y    &kp O     &to QWERTY
 &kp ESC    HOME_A   HOME_R     HOME_S    HOME_T  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        HOME_N  HOME_E     HOME_I   HOME_O     &kp SQT
@@ -97,7 +107,7 @@
         };
 
         qwerty_layer {
-            display-name = "QWERTY";
+            display-name = "QWERT";
             bindings = <
 &kp TAB    &kp Q  &kp W      &kp E     &kp R  &kp T                              &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &to COLEMAK
 &kp ESC    &kp A  &kp S      &kp D     &kp F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
@@ -119,7 +129,7 @@
         };
 
         nav_layer {
-            display-name = "NAVIGATION";
+            display-name = "NAVI";
             bindings = <
 &trans  &kp DOT     &kp N4      &kp N3    &kp N2    &kp N1                            &mmv MOVE_UP                     &none  &kp HOME  &kp UP     &kp END      &none  &kp BSPC
 &trans  &kp LCTL    &kp LALT    &kp LSFT  &kp LGUI  &kp N0            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &kp LEFT  &kp DOWN   &kp RIGHT  &kp ESC  &kp GRAVE
