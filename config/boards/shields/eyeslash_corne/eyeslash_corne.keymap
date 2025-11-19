@@ -96,7 +96,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "COLEM";
+            display-name = "COLEMAK";
             bindings = <
 &kp TAB    &kp Q    &kp W      &kp F     &kp P   &kp B                              &kp UP                &kp J        &kp L   &kp U      &kp Y    &kp O     &none
 &kp ESC    HOME_A   HOME_R     HOME_S    HOME_T  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        HOME_N  HOME_E     HOME_I   HOME_O     &kp SQT
@@ -107,7 +107,7 @@
         };
 
         qwerty_layer {
-            display-name = "QWERT";
+            display-name = "QWERTY";
             bindings = <
 &kp TAB    &kp Q  &kp W      &kp E     &kp R  &kp T                              &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &none
 &kp ESC    &kp A  &kp S      &kp D     &kp F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
