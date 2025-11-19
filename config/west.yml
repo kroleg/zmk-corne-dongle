@@ -6,6 +6,8 @@ manifest:
     #   url-base: https://github.com/GPeye
     - name: englmaxi
       url-base: https://github.com/englmaxi
+    - name: kroleg
+      url-base: https://github.com/kroleg
   projects:
     # - name: hammerbeam-slideshow
     #   remote: gpeye
@@ -15,7 +17,7 @@ manifest:
       revision: v0.3.0
       import: app/west.yml
     - name: zmk-dongle-display
-      remote: englmaxi
-      revision: main
+      remote: kroleg
+      revision: layer-name-width
   self:
     path: config
