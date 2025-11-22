@@ -12,13 +12,14 @@
 #include <dt-bindings/zmk/rgb.h>
 
 // home row mods for qwerty
+#define QH_A &mt LCTL A
 #define QH_S &mt LALT S
 #define QH_D &mt LSFT D
 #define QH_F &mt LGUI F
 #define QH_J &mt RGUI J
 #define QH_K &mt RSFT K
 #define QH_L &mt LALT L
-#define QH_SCLN &mt RCTL SCLN
+#define QH_SEMI &mt RCTL SEMI
 
 // home row mods COLEMAK
 #define HOME_A &mt LCTL A
@@ -110,7 +111,7 @@
             display-name = "QWERTY";
             bindings = <
 &kp TAB    &kp Q  &kp W      &kp E     &kp R  &kp T                              &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &none
-&kp ESC    &kp A  &kp S      &kp D     &kp F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp ESC    QH_A   QH_S       QH_D      QH_F   &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        QH_J   QH_K       QH_L     QH_SEMI  &kp SQT
 &kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &kp B       &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
                              &kp TAB   &mo SYM  &kp ENTER                                                &mt LSFT SPACE  &mo NAV  &trans
             >;
