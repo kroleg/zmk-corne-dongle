@@ -3,3 +3,5 @@ zmk/
 modules/
 tools/
 .west/
+
+.claude/settings.local.json
