@@ -133,7 +133,7 @@
             display-name = "NAVI";
             bindings = <
 &trans  &kp DOT     &kp N4      &kp N3    &kp N2    &kp N1                            &mmv MOVE_UP                     &none  &kp HOME  &kp UP     &kp END      &none  &kp BSPC
-&trans  &kp LCTL    &kp LALT    &kp LSFT  &kp LGUI  &kp N0            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &kp LEFT  &kp DOWN   &kp RIGHT  &kp ESC  &kp GRAVE
+&trans  &kp LCTL    &kp LALT    &kp LSFT  &kp LGUI  &kp N0            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &kp LEFT  &kp DOWN   &kp RIGHT  &none  &kp GRAVE
 &trans  &kp N9      &kp N8      &kp N7    &kp N6    &kp N5      &trans                &mmv MOVE_DOWN                   &none  &kp LS(TAB)  &kp BSPC   &kp TAB    &none  &kp TILDE
                                     &trans     &trans     &trans                                                            &trans    &trans     &trans
             >;
