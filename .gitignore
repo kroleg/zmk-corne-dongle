@@ -5,3 +5,4 @@ tools/
 .west/
 
 .claude/settings.local.json
+.env
