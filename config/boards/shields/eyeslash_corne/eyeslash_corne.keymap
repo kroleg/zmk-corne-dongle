@@ -76,9 +76,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_pause_for_release>
-                , <&tog QWERTY>
-                , <&macro_press &kp LC(SPACE)>
+                = <&tog QWERTY>
+                , <&macro_press &kp LCTL>
+                , <&macro_tap &kp SPACE>
+                , <&macro_pause_for_release>
+                , <&macro_release &kp LCTL>
                 ;
         };
     };
