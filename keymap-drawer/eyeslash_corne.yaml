@@ -15,19 +15,19 @@ layers:
   - O
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:keyboard-esc$$
-  - {t: A, h: LCTL}
+  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - {t: R, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: S, h: LSFT}
-  - {t: T, h: LGUI}
+  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: T, h: '$$mdi:apple-keyboard-command$$'}
   - G
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
   - M
-  - {t: N, h: RGUI}
-  - {t: E, h: RSFT}
+  - {t: N, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: E, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: I, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: O, h: RCTL}
+  - {t: O, h: '$$mdi:apple-keyboard-control$$'}
   - {t: '''', s: '"'}
   - '&td0'
   - Z
@@ -46,16 +46,16 @@ layers:
   - $$mdi:keyboard-tab$$
   - SYM
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:keyboard-space$$', h: LSFT}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - NAVI
-  - {t: 'Gui+$$mdi:keyboard-space$$', h: Meh+LGUI}
+  - {t: 'Gui+$$mdi:keyboard-space$$', h: '$$mdi:star-four-points$$'}
   QWERTY:
   - $$mdi:keyboard-tab$$
   - Q
   - W
   - E
   - R
-  - T
+  - {t: T, s: ''''}
   - $$mdi:arrow-up-bold$$
   - Y
   - U
@@ -64,19 +64,19 @@ layers:
   - P
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:keyboard-esc$$
-  - {t: A, h: LCTL}
+  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: D, h: LSFT}
-  - {t: F, h: LGUI}
+  - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
   - G
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
   - H
-  - {t: J, h: RGUI}
-  - {t: K, h: RSFT}
+  - {t: J, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ;, h: RCTL, s: ':'}
+  - {t: ;, h: '$$mdi:apple-keyboard-control$$', s: ':'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-control$$
   - Z
@@ -95,7 +95,7 @@ layers:
   - $$mdi:keyboard-tab$$
   - SYM
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:keyboard-space$$', h: LSFT}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - NAVI
   - {t: '$$mdi:transfer$$', type: trans}
   SYM:
@@ -162,10 +162,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
-  - LCTL
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - LSFT
-  - LGUI
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-command$$
   - {t: '0', s: )}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
@@ -174,7 +174,7 @@ layers:
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '9', s: (}
@@ -198,7 +198,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   HIGH:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: QWERTY, h: toggle}
+  - '&to_rus'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
