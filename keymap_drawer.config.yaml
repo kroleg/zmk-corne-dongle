@@ -422,8 +422,8 @@ parse_config:
     INSERT:
        tap: 'Ins'
        shifted: ''
-    # "Meh" key
-    LS(LC(LALT)): $$mdi:star-three-points$$
+    # Hyper
+    LS(LA(LC(LGUI))): $$mdi:star-four-points$$
 
     # Arrows
     UP: $$mdi:arrow-up-bold$$
@@ -488,7 +488,7 @@ parse_config:
     C_AL_LOCK: $$mdi:lock$$
     K_CANCEL: $$mdi:close-box$$
     K_FIND: $$mdi:apple-finder$$
-    # Command + 
+    # Command +
     LG(A):
       tap: 'A'
       hold: $$mdi:apple-keyboard-command$$
