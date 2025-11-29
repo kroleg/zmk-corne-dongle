@@ -82,13 +82,13 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp T>, <&kp SQT>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_RALT|MOD_LALT)>;
         };
         rus_mz: rus_mz {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp M>, <&kp RBKT>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_RALT|MOD_LALT)>;
         };
     };
 
