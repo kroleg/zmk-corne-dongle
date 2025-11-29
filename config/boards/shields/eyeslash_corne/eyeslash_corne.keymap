@@ -71,6 +71,19 @@
 };
 
 / {
+    macros {
+        to_rus: to_rus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&tog QWERTY>
+                , <&macro_press &kp CAPS>
+                ;
+        };
+    };
+};
+
+/ {
     behaviors {
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
@@ -155,7 +168,7 @@
         layer_3 {
             display-name = "HIGH";
             bindings = <
-&none   &tog QWERTY &none   &none        &none     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
+&none   &to_rus     &none   &none        &none     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
 &none   &none       &none   &none        &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
 &none   &none       &none   &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
                                 &trans      &trans      &trans                                                                   &trans       &trans     &trans
