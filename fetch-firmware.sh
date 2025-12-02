@@ -37,20 +37,32 @@ echo "Fetching latest build from $REPO..."
 # Get latest workflow run (any status)
 RUN_DATA=$(fetch_json "$API_URL/actions/workflows/$WORKFLOW/runs?per_page=1")
 RUN_ID=$(echo "$RUN_DATA" | jq -r '.workflow_runs[0].id')
-RUN_STATUS=$(echo "$RUN_DATA" | jq -r '.workflow_runs[0].conclusion')
 
 if [[ -z "$RUN_ID" || "$RUN_ID" == "null" ]]; then
     echo "Error: No builds found."
     exit 1
 fi
 
-if [[ "$RUN_STATUS" != "success" ]]; then
-    echo "Error: Latest build failed (status: $RUN_STATUS)"
-    echo "Check: https://github.com/$REPO/actions/workflows/$WORKFLOW"
-    exit 1
-fi
+# Wait for workflow to complete if still running
+while true; do
+    RUN_DATA=$(fetch_json "$API_URL/actions/runs/$RUN_ID")
+    RUN_STATUS=$(echo "$RUN_DATA" | jq -r '.status')
+    RUN_CONCLUSION=$(echo "$RUN_DATA" | jq -r '.conclusion')
 
-RUN_DATE=$(echo "$RUN_DATA" | jq -r '.workflow_runs[0].created_at')
+    if [[ "$RUN_STATUS" == "completed" ]]; then
+        if [[ "$RUN_CONCLUSION" != "success" ]]; then
+            echo "Error: Build failed (conclusion: $RUN_CONCLUSION)"
+            echo "Check: https://github.com/$REPO/actions/runs/$RUN_ID"
+            exit 1
+        fi
+        break
+    fi
+
+    echo "Workflow in progress (status: $RUN_STATUS)... waiting 10s"
+    sleep 10
+done
+
+RUN_DATE=$(echo "$RUN_DATA" | jq -r '.created_at')
 echo "Found run #$RUN_ID from $RUN_DATE"
 
 # Get artifacts
@@ -79,3 +91,6 @@ echo "$ARTIFACTS" | jq -r '.artifacts[] | "\(.id) \(.name)"' | while read -r ID 
 done
 
 echo "Done!"
+
+# Notification
+osascript -e 'display notification "Firmware downloaded" with title "ZMK Build"' 2>/dev/null || printf '\a'
