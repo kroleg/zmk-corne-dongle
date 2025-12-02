@@ -100,10 +100,18 @@
             bindings = <&kp T>, <&kp SQT>;
             mods = <(MOD_RALT|MOD_LALT)>;
         };
+        // мягкий - твердый знак
         rus_mz: rus_mz {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp M>, <&kp RBKT>;
+            mods = <(MOD_RALT|MOD_LALT)>;
+        };
+        // Ш Щ
+        rus_sh: rus_sh {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp I>, <&kp O>;
             mods = <(MOD_RALT|MOD_LALT)>;
         };
     };
@@ -138,9 +146,9 @@
         qwerty_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W      &kp E     &kp R  &rus_e                              &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &none
-&kp ESC    QH_A   QH_S       QH_D      QH_F   &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        QH_J   QH_K       QH_L     QH_SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &kp B       &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+&kp TAB    &kp Q  &kp W      &kp E     &kp R  &rus_e                             &kp UP                &kp Y        &kp U    &rus_sh    &kp LBKT    &kp P     &none
+&kp ESC    QH_A   QH_S       QH_D      QH_F   &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        QH_J     QH_K       QH_L        QH_SEMI   &none
+&kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &kp B       &kp SPACE              &kp DOWN              &kp N        &rus_mz  &kp COMMA  &kp DOT     &kp FSLH  &none
                              &kp TAB   &mo SYM  &kp ENTER                                                &mt LSFT SPACE  &mo NAV  &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
