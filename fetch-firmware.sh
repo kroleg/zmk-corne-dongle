@@ -32,14 +32,21 @@ fetch_json() {
     curl -sL -H "$AUTH_HEADER" -H "Accept: application/vnd.github+json" "$1"
 }
 
-echo "Fetching latest successful build from $REPO..."
+echo "Fetching latest build from $REPO..."
 
-# Get latest successful workflow run
-RUN_DATA=$(fetch_json "$API_URL/actions/workflows/$WORKFLOW/runs?status=success&per_page=1")
+# Get latest workflow run (any status)
+RUN_DATA=$(fetch_json "$API_URL/actions/workflows/$WORKFLOW/runs?per_page=1")
 RUN_ID=$(echo "$RUN_DATA" | jq -r '.workflow_runs[0].id')
+RUN_STATUS=$(echo "$RUN_DATA" | jq -r '.workflow_runs[0].conclusion')
 
 if [[ -z "$RUN_ID" || "$RUN_ID" == "null" ]]; then
-    echo "Error: No successful builds found."
+    echo "Error: No builds found."
+    exit 1
+fi
+
+if [[ "$RUN_STATUS" != "success" ]]; then
+    echo "Error: Latest build failed (status: $RUN_STATUS)"
+    echo "Check: https://github.com/$REPO/actions/workflows/$WORKFLOW"
     exit 1
 fi
 
