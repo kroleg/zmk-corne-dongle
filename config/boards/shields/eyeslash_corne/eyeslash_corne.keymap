@@ -182,9 +182,9 @@ _____  &kp Z    &kp X      &kp C     &kp D   &kp V       &kp SPACE              
         qwerty_layer {
             display-name = "QWERTY";
             bindings = <
-_____ &none  &kp W      &kp E     &kp R  &rus_e                             &kp UP                &kp Y        &kp U    &rus_sh    &kp LBKT    &kp P     _____
+_____ &kp Q  &kp W      &kp E     &kp R  &rus_e                             &kp UP                &kp Y        &kp U    &rus_sh    &kp LBKT    &kp P     _____
 _____ QH_A   QH_S       QH_D      QH_F   &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        QH_J     QH_K       QH_L        QH_SEMI   _____
-_____ &kp Q  &kp X      &kp C     &kp V  &kp B       &kp SPACE              &kp DOWN              &kp N        &rus_mz  &kp COMMA  &kp DOT     &kp FSLH  _____
+_____ &kp Z  &kp X      &kp C     &kp V  &kp B       &kp SPACE              &kp DOWN              &kp N        &rus_mz  &kp COMMA  &kp DOT     &kp FSLH  _____
                              &kp TAB   &mo SYM  &kp ENTER                                                &mt LSFT SPACE  &mo NAV  &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
