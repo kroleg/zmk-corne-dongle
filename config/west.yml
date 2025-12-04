@@ -18,6 +18,6 @@ manifest:
       import: app/west.yml
     - name: zmk-dongle-display
       remote: kroleg
-      revision: layer-name-width
+      revision: feat/battery-display-options
   self:
     path: config
