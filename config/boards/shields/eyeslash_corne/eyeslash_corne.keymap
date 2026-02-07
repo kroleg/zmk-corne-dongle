@@ -150,6 +150,14 @@
             bindings = <&kp I>, <&kp O>;
             mods = <(MOD_RALT|MOD_LALT)>;
         };
+        // Cmd+B → Cmd+V on QWERTY (same physical key as Colemak V)
+        cmd_b: cmd_b {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp B>, <&kp V>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -184,7 +192,7 @@ _____  &kp Z    &kp X      &kp C     &kp D   &kp V       &kp SPACE              
             bindings = <
 _____ &kp Q  &kp W      &kp E     &kp R  &rus_e                             &kp UP                &kp Y        &kp U    &rus_sh    &kp LBKT    &kp P     _____
 _____ QH_A   QH_S       QH_D      QH_F   &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        QH_J     QH_K       QH_L        QH_SEMI   _____
-_____ &kp Z  &kp X      &kp C     &kp V  &kp B       &kp SPACE              &kp DOWN              &kp N        &rus_mz  &kp COMMA  &kp DOT     &kp FSLH  _____
+_____ &kp Z  &kp X      &kp C     &kp V  &cmd_b      &kp SPACE              &kp DOWN              &kp N        &rus_mz  &kp COMMA  &kp DOT     &kp FSLH  _____
                              &kp TAB   &mo SYM  &kp ENTER                                                &mt LSFT SPACE  &mo NAV  &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
