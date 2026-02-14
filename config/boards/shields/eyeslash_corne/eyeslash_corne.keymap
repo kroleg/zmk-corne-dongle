@@ -179,7 +179,7 @@
         default_layer {
             display-name = "COLEMAK";
             bindings = <
-_____  &kp Q    &kp W      &kp F     &kp P   &kp B                              &kp UP                &kp J        &kp L   &kp U      &kp Y    &kp O     _____
+_____  &kp Q    &kp W      &kp F     &kp P   &kp B                              &kp UP                &kp J        &kp L   &kp U      &kp Y    &kp LG(F13)     _____
 _____  HOME_A   HOME_R     HOME_S    HOME_T  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        HOME_N  HOME_E     HOME_I   HOME_O    _____
 _____  &kp Z    &kp X      &kp C     &kp D   &kp V       &kp SPACE              &kp DOWN              &kp K        &kp H   &kp COMMA  &kp DOT  &kp EXCL  _____
                              &kp TAB   &mo SYM  &kp ENTER                                                   &mt LSFT SPACE       &mo NAV   HYPER
