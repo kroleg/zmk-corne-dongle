@@ -24,6 +24,7 @@ Build firmware locally using Docker:
 ./build.sh left         # Build only left peripheral
 ./build.sh right        # Build only right peripheral
 ./build.sh peripherals  # Build both peripherals
+./build.sh test -s      # Run keymap tests in config/tests on host (no flashing)
 ```
 
 Output files are placed in the project root:

@@ -30,6 +30,7 @@ show_help() {
   echo "  left         Build left peripheral only"
   echo "  right        Build right peripheral only"
   echo "  peripherals  Build both peripherals"
+  echo "  test         Run keymap tests (config/tests) on host"
   echo ""
   echo "Options:"
   echo "  --skip-update, -s  Skip west update (faster rebuilds)"
@@ -141,6 +142,23 @@ build_right() {
   echo "Built: eyeslash_corne_right.uf2"
 }
 
+run_tests() {
+  echo ""
+  echo "========================================="
+  echo "Running keymap tests"
+  echo "========================================="
+  docker run --rm \
+    -v "$WORKSPACE:/workspaces/zmk" \
+    -w /workspaces/zmk/zmk/app \
+    -e ZEPHYR_BASE=/workspaces/zmk/zephyr \
+    -e ZMK_BUILD_DIR=/workspaces/zmk/build/tests \
+    zmkfirmware/zmk-dev-arm:stable \
+    /bin/bash -c "
+      west zephyr-export
+      ./run-test.sh /workspaces/zmk/config/tests
+    "
+}
+
 case "$BUILD_TARGET" in
   all)
     build_dongle
@@ -159,6 +177,9 @@ case "$BUILD_TARGET" in
   peripherals)
     build_left
     build_right
+    ;;
+  test)
+    run_tests
     ;;
   *)
     echo "Unknown target: $BUILD_TARGET"

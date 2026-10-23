@@ -1,0 +1,44 @@
+// Host-side test of the real keymap: RU layer shortcuts must send Colemak keys.
+// Run: ./build.sh test
+#include "../../boards/shields/eyeslash_corne/eyeslash_corne.keymap"
+#include <dt-bindings/zmk/kscan_mock.h>
+
+// positions: 1 = &to_rus (on TRI), 3 = е, 5 = е/ё, 14 = ф/Ctrl, 15 = ы/Alt,
+// 16 = в/Shift, 17 = а/Cmd, 32 = м, 33 = и, 43 = SYM, 46 = NAV, 47 = Hyper
+&kscan {
+    rows = <1>;
+    columns = <48>;
+    events = <
+        /* SYM+NAV -> TRI, tap &to_rus -> QWERTY layer */
+        ZMK_MOCK_PRESS(0,43,10) ZMK_MOCK_PRESS(0,46,10)
+        ZMK_MOCK_PRESS(0,1,10) ZMK_MOCK_RELEASE(0,1,10)
+        ZMK_MOCK_RELEASE(0,46,10) ZMK_MOCK_RELEASE(0,43,300)
+
+        /* plain е -> E */
+        ZMK_MOCK_PRESS(0,3,10) ZMK_MOCK_RELEASE(0,3,300)
+
+        /* Cmd (held past tapping term) + е -> GUI+F */
+        ZMK_MOCK_PRESS(0,17,250) ZMK_MOCK_PRESS(0,3,10) ZMK_MOCK_RELEASE(0,3,10) ZMK_MOCK_RELEASE(0,17,300)
+
+        /* fast roll Cmd + е -> GUI+F */
+        ZMK_MOCK_PRESS(0,17,30) ZMK_MOCK_PRESS(0,3,30) ZMK_MOCK_RELEASE(0,3,10) ZMK_MOCK_RELEASE(0,17,300)
+
+        /* Shift + е -> Shift+E (Russian capital, no morph) */
+        ZMK_MOCK_PRESS(0,16,250) ZMK_MOCK_PRESS(0,3,10) ZMK_MOCK_RELEASE(0,3,10) ZMK_MOCK_RELEASE(0,16,300)
+
+        /* Cmd + в (home row, tap) -> GUI+S */
+        ZMK_MOCK_PRESS(0,17,250) ZMK_MOCK_PRESS(0,16,10) ZMK_MOCK_RELEASE(0,16,10) ZMK_MOCK_RELEASE(0,17,300)
+
+        /* Alt + е/ё -> ё (SQT, Alt masked) */
+        ZMK_MOCK_PRESS(0,15,250) ZMK_MOCK_PRESS(0,5,10) ZMK_MOCK_RELEASE(0,5,10) ZMK_MOCK_RELEASE(0,15,300)
+
+        /* Cmd + е/ё -> GUI+B */
+        ZMK_MOCK_PRESS(0,17,250) ZMK_MOCK_PRESS(0,5,10) ZMK_MOCK_RELEASE(0,5,10) ZMK_MOCK_RELEASE(0,17,300)
+
+        /* Ctrl + и -> CTRL+V */
+        ZMK_MOCK_PRESS(0,14,250) ZMK_MOCK_PRESS(0,33,10) ZMK_MOCK_RELEASE(0,33,10) ZMK_MOCK_RELEASE(0,14,300)
+
+        /* Hyper + м -> all mods + D */
+        ZMK_MOCK_PRESS(0,47,250) ZMK_MOCK_PRESS(0,32,10) ZMK_MOCK_RELEASE(0,32,10) ZMK_MOCK_RELEASE(0,47,300)
+    >;
+};
