@@ -59,3 +59,11 @@ The shield has three parts defined in `boards/shields/eyeslash_corne/`:
 - `eyeslash_corne_central_dongle` - USB dongle (connects to host, has display)
 - `eyeslash_corne_peripheral_left` - Left half with encoder
 - `eyeslash_corne_peripheral_right` - Right half
+
+### Keymap drawing
+
+`keymap-drawer/draw.sh` parses the keymap with keymap-drawer (in Docker) and writes
+`keymap-drawer/eyeslash_corne.{yaml,svg,json}`. The RU (QWERTY) layer gets Cyrillic
+legends for the macOS "Russian" layout (`keymap-drawer/ru_legends.py`). The JSON is also
+copied to the floating keymap viewer app in `~/code/os/keymap/` (when it exists) and the app is rebuilt.
+Re-run it after changing the keymap.
