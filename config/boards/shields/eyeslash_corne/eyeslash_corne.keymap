@@ -82,40 +82,6 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        // й + а = я
-        combo_ya {
-            timeout-ms = <100>;
-            key-positions = <25 17>;
-            bindings = <&kp Z>;
-            layers = <QWERTY>;
-        };
-        // й + а = я
-        combo_ya2 {
-            timeout-ms = <100>;
-            key-positions = <25 26>;
-            bindings = <&kp Z>;
-            layers = <QWERTY>;
-        };
-        // й + у = ю
-        combo_yu {
-            timeout-ms = <100>;
-            key-positions = <25 3>;
-            bindings = <&kp DOT>;
-            layers = <QWERTY>;
-        };
-        // ш + ь = щ
-        combo_shch {
-            timeout-ms = <100>;
-            key-positions = <9 37>;
-            bindings = <&kp O>;
-            layers = <QWERTY>;
-        };
-    };
-};
-
-/ {
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
